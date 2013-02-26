@@ -2,7 +2,7 @@ class ContentItemsController < ApplicationController
   # GET /content_items
   # GET /content_items.json
   def index
-    @content_items = (params[:busID]) ? ContentItem.where("busID = ?", params[:busID]) : ContentItem.all
+    @content_items = (params[:busID]) ? ContentItem.where("\"busID\" = ?", params[:busID]) : ContentItem.all
 
     respond_to do |format|
       format.html # index.html.erb
