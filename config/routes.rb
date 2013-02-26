@@ -1,4 +1,8 @@
 Busroutes2013::Application.routes.draw do
+  resources :locations
+
+  resources :content_items
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

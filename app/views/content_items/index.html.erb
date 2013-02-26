@@ -1,0 +1,35 @@
+<h1>Listing content_items</h1>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Busid</th>
+    <th>Teamname</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Url</th>
+    <th>Location id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @content_items.each do |content_item| %>
+  <tr>
+    <td><%= content_item.time %></td>
+    <td><%= content_item.busID %></td>
+    <td><%= content_item.teamName %></td>
+    <td><%= content_item.title %></td>
+    <td><%= content_item.description %></td>
+    <td><%= content_item.url %></td>
+    <td><%= content_item.location_id %></td>
+    <td><%= link_to 'Show', content_item %></td>
+    <td><%= link_to 'Edit', edit_content_item_path(content_item) %></td>
+    <td><%= link_to 'Destroy', content_item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Content item', new_content_item_path %>
